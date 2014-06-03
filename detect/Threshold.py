@@ -36,8 +36,7 @@ class Threshold:
                 tnew = int(math.floor(t+t*0.1))
 
         self.t = t
-
-        return t
+        return
 
     def binaryThreshold(self,image):
 

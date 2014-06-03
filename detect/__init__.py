@@ -1,1 +1,1 @@
-__all__ = ['calibrate','findEye']
+__all__ = ['EyeDetector','Threshold']
