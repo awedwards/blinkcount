@@ -3,7 +3,7 @@ import numpy as np
 import math
 
 
-def calibrate(self, image):
+def calibrate(image):
     #convert to grayscale
     if np.ndim(image)==3:
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -27,10 +27,9 @@ def calibrate(self, image):
         elif th.sum() > 1.05*target:
             tnew = int(math.floor(t+t*0.1))
 
-        t = t
-        return
+    return t
 
-def binaryThreshold(self,image,t):
+def binaryThreshold(image,t):
     #t = threshold
     m = np.amax(image)
 
