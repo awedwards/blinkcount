@@ -7,11 +7,8 @@ def main():
 
     cap = cv2.VideoCapture(0)
 
-    frame = None
-
-    while frame == None:
-        ret,frame = cap.read()
-    
+    ret,frame = cap.read()
+    cv2.imshow("test",frame)
     eye = detect.detectEye(frame)
     t = threshold.calibrate(eye)
     thEye = threshold.binaryThreshold(eye,t)
@@ -32,3 +29,5 @@ def main():
         
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+
+main()
